@@ -562,10 +562,7 @@ public class QQSDKPlugin extends CordovaPlugin {
             currentCallbackContext.getCallbackId());
         return;
       }
-      initOpenidAndToken(jsonResponse);
-      JSONObject jo =
-          makeJson(mTencent.getAccessToken(), mTencent.getOpenId(), mTencent.getExpiresIn());
-      QQSDKPlugin.this.webView.sendPluginResult(new PluginResult(PluginResult.Status.OK, jo),
+      QQSDKPlugin.this.webView.sendPluginResult(new PluginResult(PluginResult.Status.OK, jsonResponse),
           currentCallbackContext.getCallbackId());
     }
 
